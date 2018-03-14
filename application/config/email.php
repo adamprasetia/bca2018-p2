@@ -13,13 +13,17 @@ $config['charset']='utf-8';
 $config['newline']="\r\n"; 
 $config['mailtype']="html"; 
 
+$config['smtp_host']='mail.adirect.co.id'; 
+$config['smtp_user']='no-reply@adirect.co.id'; 
+$config['smtp_pass']='n0r3ply'; 
+
 //$config['smtp_host']='mail.adirect.web.id'; 
 //$config['smtp_user']='adam@adirect.web.id'; 
 //$config['smtp_pass']='Pr4set14'; 
 
-$config['smtp_host']='mail.adirect.web.id'; 
-$config['smtp_user']='no-reply@adirect.web.id'; 
-$config['smtp_pass']='n0-reply'; 
+// $config['smtp_host']='mail.adirect.web.id'; 
+// $config['smtp_user']='no-reply@adirect.web.id'; 
+// $config['smtp_pass']='n0-reply'; 
 
 //$config['smtp_host']='ssl://mail.marlboro.co.id'; 
 //$config['smtp_user']='info@marlboro.co.id'; 

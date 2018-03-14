@@ -93,7 +93,11 @@ class Interview extends MY_Controller {
 			$xdata['breadcrumb']	= 'interview'.get_query_string();
 			$xdata['callhis']		= $this->interview_model->get_call($id);
 			$xdata['action']		= 'interview/phone/'.$id.get_query_string();
-			$data['content'] = $this->load->view('interview_form',$xdata,true);
+			if ($this->event['id'] == 1 || $this->event['id'] == 2) {				
+				$data['content'] = $this->load->view('interview_form',$xdata,true);
+			}else{
+				$data['content'] = $this->load->view('interview_vip_form',$xdata,true);
+			}
 			$this->load->view('template',$data);
 		}else{
 			$data = array(
@@ -109,6 +113,7 @@ class Interview extends MY_Controller {
 				'called'=>$this->input->post('called')?$this->input->post('called'):0,
 				'minute'=>$this->input->post('minute')?$this->input->post('minute'):0,
 				'know'=>$this->input->post('know')?$this->input->post('know'):0,
+				'invite'=>$this->input->post('invite')?$this->input->post('invite'):0,
 				'pre_registered'=>$this->input->post('pre_registered')?$this->input->post('pre_registered'):0,
 				'send_email'=>$this->input->post('send_email')?$this->input->post('send_email'):0,
 				'get_email'=>$this->input->post('get_email')?$this->input->post('get_email'):0,
