@@ -69,22 +69,23 @@
 						<p>Cari Pegawai dengan title : </p>
 						<?php if ($this->event['id']=='1'){ ?>
 						<ol>
-							<li>Corporate Management</li>
-							<li>Engineering Management</li>
-							<li>Technical Management</li>
-							<li>Operations Management</li>
+							<li>Corporate Management (Eg. CEO, Managing Director, General Manager)</li>
+							<li>Engineering Management (Eg. Head of Engineering, Chief Engineer)</li>
+							<li>Technical Management (Eg. Head of Technical)</li>
+							<li>Operations Management (Eg: Head of Operations, Production Manager / Post Production Manager)</li>
 							<li>Digital Media / New Media</li>
-							<li>IT Management</li>
-							<li>Human Resource</li>
+							<li>IT Management (Eg: CTO, CIO, IT Director, IT Manager)</li>
+							<li>Human Resource </li>
 						</ol>
 						<?php }else if ($this->event['id']=='2'){ ?>
 						<ol>							
-							<li>Digital</li>
-							<li>Innovation</li>
-							<li>Next Generation</li>
-							<li>Future Technology</li>
-							<li>IoT Security Solutions</li>
-							<li>Cyber-Intelligence</li>
+							<li>Corporate Management (Eg. CEO, Managing Director, General Manager)</li>
+							<li>Engineering Management (Eg. Head of Engineering, Chief Engineer)</li>
+							<li>Technical Management (Eg. Head of Technical)</li>
+							<li>Operations Management (Eg: Head of Operations, Production Manager / Post Production Manager)</li>
+							<li>Digital Media / New Media</li>
+							<li>IT Management (Eg: CTO, CIO, IT Director, IT Manager)</li>
+							<li>Human Resource </li>
 						</ol>
 						<?php } ?>
 					</div>
@@ -177,6 +178,10 @@
 				<div class="box-body">
 					<label>Alamat email :</label>
 					<input id="email_new" type="text" name="email_new" class="form-control" maxlength="100" size="30" autocomplete="off" value="<?php echo set_value('email_new',(isset($candidate->email_new)?$candidate->email_new:'')) ?>">
+				</div>
+				<div class="box-footer">
+					<button type="button" name="button" id="btn-send-email">Send Email</button>
+					<div class="send-email-alert"></div>
 				</div>
 			</div>			
 			<div class="box box-mobile hide">
@@ -418,13 +423,13 @@ $(document).ready(function(){
 	$('body').on('click','#btn-send-email',function(event){
 		if(confirm('Are you sure')){
 			$.ajax({
-				url:$(this).attr('href')
-				,data:{email:$('#email_new').val(),'fullname':$('#name_new').val()}
-				,type:'post'
-				,beforeSend: function () {
+				url:'<?php echo site_url('interview/send_email/'.$candidate->id) ?>',
+				data:{email:$('#email_new').val(),'fullname':$('#name_new').val()},
+				type:'post',
+				beforeSend: function () {
 					$('.send-email-alert').html('<p>Please wait...</p>');
-				}
-				,success:function(str){
+				},
+				success:function(str){
 					$('.send-email-alert').html(str);
 				}
 			});	
