@@ -123,9 +123,9 @@ CREATE TABLE IF NOT EXISTS `event` (
   `web` varchar(50) NOT NULL DEFAULT '',
   `pre_register` varchar(50) NOT NULL DEFAULT '',
   `user_create` int(11) NOT NULL DEFAULT '0',
-  `date_create` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_create` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `user_update` int(11) NOT NULL DEFAULT '0',
-  `date_update` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_update` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
