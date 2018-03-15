@@ -10,25 +10,40 @@
 <section class="content">
 	<div class="box">
 		<div class="box-header info">
-			Tentang
+			Mengenai BCA2018 dan ConnecTechcAsia
 		</div>
 		<div class="box-body">
-			<p>BroadcastAsia2018 adalah ajang internasional yang wajib diikuti Asia untuk industri pro-audio, film, media digital dan penyiaran. </p>
-			<p>Bergabunglah dan berkumpul dengan profesional yang sama seperti mereka untuk mendapatkan inovasi teknologi terkini mengenai Keamanan Media Konten, Produksi Langsung, Penyiaran IP, Platform Konten OTT dan Alternatif, UHD / HDR dan masih banyak lagi.</p>
+			<p>ConnecTechAsia adalah payung acara yang mencakup CommunicAsia, NXTAsia dan BroadcastAsia yang berbeda dan akan menampilkan kemajuan teknologi terbaru untuk industri pro-audio, film dan TV.ConnecTechAsia akan menjadi platform bisnis internasional MEGA yang melayani keseluruhan industri penyiaran ICT, penyiaran dan multimedia digital dan perusahaan lintas vertikal industri di Asia.</p>
 		</div>
 	</div>
 	<div class="box">
 		<div class="box-header info">
-			Manfaat dan Highlights
+			VIP Privileges 
+		</div>
+		<div class="box-body">
+			<p>Sebagai VIP kami, Anda dapat menikmati hak istimewa sebagai berikut:</p>
+			<ul>				
+				<li>Pendaftaran registrasi dan lencana/badge pada Counter Pendaftaran VIP eksklusif kami</li>
+				<li>Dapatkan akses gratis ke lingkungan yang kondusif dari ruang VIP agar Anda dapat menjalin jaringan dengan teman sebayanya</li>
+				<li>Biaya Super Saver ke Summit ConnecTechAsia2018 tingkat tinggi</li>
+				<li>Pengaturan pertemuan 1-ke-1 meeting untuk Anda bertemu dengan eksekutif tingkat-C dari peserta pameran terpilih Anda</li>			  
+				<li>Wawancara peluang di Show Daily yang akan dibagikan ke profesional perdagangan dan masih banyak lagi.</li>
+				<li>Hak istimewa ini tidak dapat dipindahtangankan</li>
+			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-header info">
+			Benefit dan Highlights Event
 		</div>
 		<div class="box-body">
 			<ol>
-				<li>Memenuhi lebih dari 600 pemilik merek dan penyedia solusi internasional dalam satu platform tunggal. Daftar lengkap peserta pameran tersedia di situs web.</li>				
-				<li>Saksikan inovasi terbaru dalam ekosistem siaran dari produksi dan pasca produksi, manajemen hingga distribusi dan audio profesional. Dapatkan pra tinjauan melalui Katalog Tayang Online di situs web.</li>				
-				<li>Sumber efisien dari bidang tematik utama: TV Everywhere! Zone, Sinematografi / Film / Produksi, Audio Profesional dan Zona Realitas Virtual.</li>				
-				<li>Berpartisipasi dalam kegiatan bebas dan mendapatkan pengetahuan dari para ahli: Hub Produksi Post I, Produser Connect, Innovation Hub dan banyak lainnya.</li>				
-				<li>Bergabunglah dengan Technology Themed Guided Tours yang akan membawa pengunjung berkeliling ke peserta pameran yang dipilih.</li>				
-				<li>Simak lebih detail Konferensi ConnecTechAsia  tentang program konferensi dan daftar lebih awal untuk menghemat lebih banyak!</li>
+				<li>Akan bertemu dengan lebih dari 600 pemilik merek dan penyedia solusi internasional dalam satu platform tunggal. Daftar lengkap peserta pameran tersedia di situs web.</li>
+				<li>Saksikan inovasi terbaru dalam ekosistem siaran dari produksi dan pasca produksi, manajemen hingga distribusi dan audio profesional</li>
+				<li>Sumber efisien dari bidang tematik utama: TV Everywhere! Zone, ProAudio Tech dan LED / Digital Display.</li>
+				<li>Berpartisipasi dalam kegiatan bebas dan mendapatkan pengetahuan dari para ahli: Produser Connect, Innovation Hub, TveXchange <new>, Radio New Wave <new> dan banyak lainnya.</li>
+				<li>Bergabunglah dengan Teknologi yang dipandu oleh Tour Guide yang akan membawa pengunjung ke peserta pameran tertentu yang menampilkan teknologi utama seperti HDR / UHD Workflow, Penyiaran IP, TV Everywhere, Produksi Langsung + Sajak Olah Raga dan Video Analytics.</li>
+				<li>Konferensi ConnecTechAsia yang penuh dengan daya. Simak lebih detail tentang program konferensi dan daftar lebih awal untuk menghemat lebih banyak</li>
 			</ol>
 		</div>
 	</div>
@@ -44,6 +59,22 @@
 				<li>CommunicAsia / NXTAsia: Marina Bay Sands, Singapura</li>
 				<li>BroadcastAsia: Suntec Singapura</li>
 			</ul>
+		</div>
+	</div>
+	<div class="box">
+		<div class="box-header info">
+			Bagaimana cara Register?
+		</div>
+		<div class="box-body">
+			<p><strong><u>Masuk ke pameran gratis. Pra-register sebelum 18 June akan menikmati kemudahan mencetak lencana mereka sendiri</u></strong></p>
+			<p>Kunjungi https: //www.connectechasia.com/ visitor-registration/ dan submit formulirnya.</p>
+			<p>Surat konfirmasi akan dikirim via email. Detail untuk akses ke portal pengunjung mereka juga akan dikirimkan kepada mereka</p>			
+			<p>Mereka dapat mencetak lencana/badge mereka dan mengaktifkan lencana mereka di pintu masuk aula atau membawa email konfirmasi pada hari kunjungan untuk mengumpulkan lencana penerimaan.</p>
+			<p><strong><u>Pendaftaran di tempat untuk mengunjungi pameran</u></strong></p>
+			<p>Lanjutkan ke Area Pendaftaran Pengunjung untuk mendapatkan tiket masuk gratis.</p>
+			<p>Lengkapi kuesioner pada tiket masuk dan lanjutkan ke loket untuk registrasi.</p>			
+			<p><strong><u>Mendaftar untuk ConnecTechAsia Summit</u></strong></p>
+			<p>Pendaftaran dikenakan biaya. Kunjungi https://www.connectechasia.com/exhibit-attend/visitor-registration/ untuk mengetahui lebih lanjut.</p>			
 		</div>
 	</div>
 </section>
