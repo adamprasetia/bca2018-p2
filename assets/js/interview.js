@@ -59,27 +59,20 @@ $(document).ready(function(){
 		if($('#pre_registered').val()=='1'){
 			$('.box-mobile').removeClass('hide');
 			$('.box-pre-registered-yes').removeClass('hide');
-			$('.box-pre-registered-no').addClass('hide');
 			$('.box-closing-yes').removeClass('hide');
 		}else if($('#pre_registered').val()=='2'){
 			$('.box-mobile').addClass('hide');
 			$('.box-pre-registered-yes').addClass('hide');
-			$('.box-pre-registered-no').removeClass('hide');
 			$('.box-closing-yes').addClass('hide');
 		}else{
 			$('.box-mobile').addClass('hide');
 			$('.box-pre-registered-yes').addClass('hide');
-			$('.box-pre-registered-no').addClass('hide');
 			$('.box-closing-yes').addClass('hide');
 		}			
-		if ($('#know').val()=='1') {			
-			if($('#pre_registered').val()=='1'){
-				$('.box-pre-registered-no').addClass('hide');
-			}else if($('#pre_registered').val()=='2'){
-				$('.box-pre-registered-no').removeClass('hide');
-			}else{
-				$('.box-pre-registered-no').addClass('hide');
-			}			
+		if ($('#know').val()=='2' || $('#pre_registered').val()=='2') {
+			$('.box-pre-registered-no').removeClass('hide');
+		}else{
+			$('.box-pre-registered-no').addClass('hide');			
 		}
 	}
 	check_pre_registered();

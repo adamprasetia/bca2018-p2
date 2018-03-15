@@ -16,29 +16,25 @@
 	</head>
 	<body>
 		<p>Dear <?php echo (isset($fullname)?$fullname:"");?></p>
-		<p>It was nice speaking to you.</p>
-		<p>Here is the link for pre-registration: <a href="www.CommunicaAsia.com/visitor-registration">www.CommunicaAsia.com/visitor-registration</a></p>
+		
+		<p>Thank you for your time on the phone with me a moment ago.</p>
+		
+		<p>Here is the link for pre-registration: <a href="www.ConnecTechAsia.com/visitor-registration">www.ConnecTechAsia.com/visitor-registration</a></p>
 		<p>You will need to click on the link, fill up the information on the form and hit the Submit button. A confirmation email will be sent to you shortly.</p>
-		<p>Here is an overview of CommunicAsia2017 - </p>
-		<ul>
+		<p>Here is an overview of CommunicAsia2018 / NXTAsia2018 - </p>
+		<ul>			
 			<li>
-				<p>Date: 23 – 25 May 2017 (Tue to Thur)</p>
+				<p>Date: 26 – 28 June 2018 (Tue to Thur)</p>
 				<p>Venue: Basement 2 to Level 5, Marina Bay Sands Singapore</p>
 			</li>
-			<li>
-				<p>The show is Asia's largest info-communications technology event. The show will feature around 1,200 exhibitors from around 49 countries. Key trending technologies for this year will be on Borderless Broadband, Connected Services, Cloud & Big Data, Enterprise Mobility, IoT, SatComm, Security & Cyber-Security and Smart Cities.</p>
-				<p>Check out product listings on the Online Show Catalogue at <a href="www.CommunicAsia.com/online-show-catalogue">www.CommunicAsia.com/online-show-catalogue</a></p>
-			</li>
-			<li>
-				<p>Some Key exhibitors include <strong>ABS, CDNetworks, CISCO, Eutelsat, FiberHome, Grandstream, Huawei, Hughes,Irdeto, Iridium Communications, iDirect, Keymile, Kore Wireless, Novelsat, PCCW, SES, ST Electronics, Technicolor and more.</strong> View full listing of exhibitors at <a href="www.CommunicAsia.com/list-of-exhibitors">www.CommunicAsia.com/list-of-exhibitors</a></p>
-			</li>
+			<li>The show is Asia’s largest info-communications technology event. The show will feature around 1,200 exhibitors from around 52 countries. Key trending technologies for this year will be on 5G / SDN Broadband & Infrastructure, FTTX / Fibre Communications, SatComm, Connect Everywhere, IoT / Smart Cities, Cloud / Big Data, CyberSecurity, AI and VR/ MR/ AR.</li>
+			<li>Some Key exhibitors include <strong>ABS, Alticast, AsiaSat, CDNetworks,Cryptoguard, Eutelsat,Grandstream, Hughes, IDirect, Iridium Communications, Kore Wireless, Kratos, Narda, Newtec, PCCW, SES and more</strong>View full listing of exhibitors <a href="www.connectechasia.com/exhibition/list-of-exhibitors/">www.connectechasia.com/exhibition/list-of-exhibitors/</a></li>
 		</ul>
-		<p>Show Websites： <a href="www.CommunicAsia.com">www.CommunicAsia.com</a>, <a href="www.EnterpriseIT-Asia.com">www.EnterpriseIT-Asia.com</a></p>
-		<p>If you have further queries, please email Ms Evelyn Tan at <a href="mailto:evelyn.tan@sesallworld.com">evelyn.tan@sesallworld.com</a>. </p>
-		<p>Thanks and we look forward to seeing you at CommunicAsia2017.</p>
+		<p>Show Websites：<a href="www.CommunicAsia.com">www.CommunicAsia.com</a>, <a href="www.NXTAsiaExpo.com">www.NXTAsiaExpo.com</a></p>
+		<p>If you have further queries, please email Ms Evelyn Tan at <a href="mailto:evelyn.tan@ubm.com">evelyn.tan@ubm.com</a>. </p>
+		<p>Thanks and we look forward to seeing you at CommunicAsia / NXTAsia2018.</p>
 		<p>Yours sincerely,</p>
-		<?php echo (isset($telemarketer)?$telemarketer:"");?>
-		<p>On behalf of CommunicAsia2017</p>
-
+		<p><?php echo (isset($telemarketer)?$telemarketer:"");?></p>
+		<p>On behalf of CommunicAsia / NXTAsia2018</p>	
 	</body>
 </html>

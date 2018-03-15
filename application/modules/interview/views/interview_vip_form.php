@@ -42,9 +42,14 @@
 				<div class="box-header info">
 					<b>Opening</b>
 				</div>	
+				<?php if ($this->event['id'] == 3){
+					$event_name = 'BroadcastAsia2018';
+				}else{
+					$event_name = 'CommunicAsia2018 dan NXTAsia2018';
+				} ?>				
 				<div class="box-body">
-					<h3><?php echo $greeting; ?>. Nama saya <strong><?php echo $this->user_login['name'] ?></strong> dan saya mewakili UBM Singapore Expo, penyelenggara <strong><?php echo $this->event['name']; ?></strong> di Singapura. Bolehkah saya berbicara dengan <strong><?php echo $candidate->name; ?></strong></h3>
-					<p class="info"><?php echo $greeting_english; ?>. My name is <strong><?php echo $this->user_login['name'] ?></strong> and I am calling on behalf of UBM Singapore Expo, organiser of <?php echo $this->event['name']; ?> in Singapore. May I speak with <strong><?php echo $candidate->name; ?></strong> please?</p>
+					<h3><?php echo $greeting; ?>. Nama saya <strong><?php echo $this->user_login['name'] ?></strong> dan saya mewakili UBM Singapore Expo, penyelenggara <strong><?php echo $event_name; ?></strong> di Singapura. Bolehkah saya berbicara dengan <strong><?php echo $candidate->name; ?></strong></h3>
+					<p class="info"><?php echo $greeting_english; ?>. My name is <strong><?php echo $this->user_login['name'] ?></strong> and I am calling on behalf of UBM, organiser of <?php echo $event_name; ?> in Singapore. May I speak with <strong><?php echo $candidate->name; ?></strong> please?</p>
 					<table class="table table-bordered">
 						<tr>
 							<td>
@@ -67,7 +72,6 @@
 					</table>
 					<div class="info">
 						<p>Cari Pegawai dengan title : </p>
-						<?php if ($this->event['id']=='3'){ ?>
 						<ol>
 							<li>Corporate Management (Eg. CEO, Managing Director, General Manager)</li>
 							<li>Engineering Management (Eg. Head of Engineering, Chief Engineer)</li>
@@ -76,17 +80,6 @@
 							<li>Digital Media / New Media</li>
 							<li>Human Resource </li>
 						</ol>
-						<?php }else if ($this->event['id']=='4'){ ?>
-						<ol>							
-							<li>Corporate Management (Eg. CEO, Managing Director, General Manager)</li>
-							<li>Engineering Management (Eg. Head of Engineering, Chief Engineer)</li>
-							<li>Technical Management (Eg. Head of Technical)</li>
-							<li>Operations Management (Eg: Head of Operations, Production Manager / Post Production Manager)</li>
-							<li>Digital Media / New Media</li>
-							<li>IT Management (Eg: CTO, CIO, IT Director, IT Manager)</li>
-							<li>Human Resource </li>
-						</ol>
-						<?php } ?>
 					</div>
 					<div class="checkbox">
 						<label>
@@ -122,20 +115,20 @@
 			</div>
 			<div class="box box-minute hide">
 				<div class="box-body form-inline">
-					<h3><?php echo $greeting; ?>, <strong><?php echo $candidate->name; ?></strong>. Nama saya <strong><?php echo $this->user_login['name'] ?></strong> dan saya mewakili UBM Singapore Expo, penyelenggara <strong><?php echo $this->event['name']; ?></strong> di Singapura. Boleh minta waktunya beberapa menit?</h3>
-					<p class="info"><?php echo $greeting_english; ?>, <strong><?php echo $candidate->name; ?></strong>. My name is <strong><?php echo $this->user_login['name'] ?></strong> and I am calling on behalf of UBM SES, organiser of ConnecTechAsia in Singapore. May I have a few minutes of your time?</p>
+					<h3><?php echo $greeting; ?>, <strong><?php echo $candidate->name; ?></strong>. Nama saya <strong><?php echo $this->user_login['name'] ?></strong> dan saya mewakili UBM Singapore Expo, penyelenggara <strong><?php echo $event_name; ?></strong> di Singapura. Boleh minta waktunya beberapa menit?</h3>
+					<p class="info"><?php echo $greeting_english; ?>, <strong><?php echo $candidate->name; ?></strong>. My name is <strong><?php echo $this->user_login['name'] ?></strong> and I am calling on behalf of UBM, organiser of <?php echo $event_name; ?> in Singapore. May I have a few minutes of your time?</p>					
 					<label>Jawaban :</label>
 					<?php echo form_dropdown('minute',array('0'=>'','1'=>'Ya','2'=>'Tidak'),set_value('minute',$candidate->minute),'id="minute" class="form-control"') ?>
 				</div>
 				<div class="box-footer">
-					<p class="info">Jika <b>"tidak ada waktu"</b> atau <b>"sibuk"</b> : Pastikan apakah candidate mengetahui acara <?php echo $this->event['name'] ?> yang akan diselenggarakan pada bulan Juni (Jika prospek memberikan indikasi untuk melanjutkan dengan panggilan, Lanjutkan kebagian selanjutnya)</p>
+					<p class="info">Jika <b>"tidak ada waktu"</b> atau <b>"sibuk"</b> : Pastikan apakah candidate mengetahui acara <?php echo $event_name ?> yang akan diselenggarakan pada bulan Juni (Jika prospek memberikan indikasi untuk melanjutkan dengan panggilan, Lanjutkan kebagian selanjutnya)</p>
 					<p class="info">Jika Benar-benar <b>"tidak ada waktu"</b> atau <b>"sibuk"</b> : Minta waktu yang tepat untuk dihubungi kembali</p>
 				</div>
 			</div>
 			<div class="box box-invite hide">
 				<div class="box-body form-inline">
 					<h3>Kami telah mengirim Anda email mengenai undangan VIP dan kami ingin mengingatkan kembali apakah sudah menerima undangan tersebut ?</h3>
-					<p class="info">May I know if you are aware of ConnecTechAsia which incorporates BroadcastAsia, CommunicAsia and NXTAsia? This mega event will be held from 26 – 28 June at Marina Bay Sands and Suntec Singapore.</p>
+					<p class="info">We have sent you a VIP invitation email and I would like to check with you if you recall coming across it?</p>
 					<label>Jawaban :</label>
 					<?php echo form_dropdown('invite',array('0'=>'','1'=>'Ya','2'=>'Tidak'),set_value('invite',$candidate->invite),'id="invite" class="form-control"') ?>
 				</div>
@@ -143,6 +136,7 @@
 			<div class="box box-pre-registered hide">
 				<div class="box-body form-inline">
 					<h3>Baik! Sudahkah Anda mendaftarkan kunjungan Anda ke pertunjukan ?</h3>
+					<p class="info">That's great! Have you pre-registered your visit to the show?</p>
 					<label>Jawaban :</label>
 					<?php echo form_dropdown('pre_registered',array('0'=>'','1'=>'Ya','2'=>'Tidak'),set_value('pre_registered',$candidate->pre_registered),'id="pre_registered" class="form-control"') ?>
 				</div>
@@ -150,29 +144,15 @@
 			<div class="box box-pre-registered-yes hide">
 				<div class="box-body form-inline">
 					<h3>Terima kasih atas dukungan & waktunya. Harap ingat untuk membawa email konfirmasi Anda untuk koleksi lencana VIP Anda. Jika Anda ingin kami mengirimkan pengingat/reminder ke pertunjukan, Anda dapat memberi saya nomor ponsel Anda dan kami akan mengirimkan pengingat SMS kepada Anda. </h3>
+					<p class="info">Thank you for your support & time. Please remember to bring along your confirmation email for your VIP badge collection.  If you would like us to send you a reminder closer to the show, you can provide me your mobile number and we will send you an SMS reminder.</p>
 				</div>
 			</div>
 			<div class="box box-pre-registered-no hide">
 				<div class="box-body form-inline">
-					<h3><?php echo $this->event['name'] ?> akan diselenggarakan dari tanggal 26-28 Juni 2018, di Suntec Singapore, dan kami telah mengirimi Anda undangan melalui email untuk menghadiri pameran tersebut sebagai VIP. Bolehkah saya mengirimkan undangan kepada anda untuk menghadiri <?php echo $this->event['name'] ?> beserta informasi acara dengan kode VIP ?</h3>
+					<h3><?php echo $event_name ?> akan diselenggarakan dari tanggal 26-28 Juni 2018, di Suntec Singapore, dan kami telah mengirimi Anda undangan melalui email untuk menghadiri pameran tersebut sebagai VIP. Bolehkah saya mengirimkan undangan kepada anda untuk menghadiri <?php echo $event_name ?> beserta informasi acara dengan kode VIP ?</h3>
+					<p class="info"><?php echo $event_name ?> will be held from 26 – 28 June 2018, at Suntec SIngapore, and we have sent you an email invitation to attend the exhibition as a VIP. Sir, can I email to you the invitation to attend BroadcastAsia2018 along with event information along with the VIP code?</p>
 					<label>Jawaban :</label>
 					<?php echo form_dropdown('send_email',array('0'=>'','1'=>'Ya','2'=>'Tidak'),set_value('send_email',$candidate->send_email),'id="send_email" class="form-control"') ?>
-				</div>
-			</div>
-
-
-			<div class="box box-know hide">
-				<div class="box-body form-inline">
-					<h3>Bolehkah saya tahu apakah Anda mengetahui <?php echo $this->event['name'] ?> yang merupakan bagian dari ConnecTechAsia, yang diselenggarakan pada tanggal 26-28 Juni di Suntec Singapore ?</h3>
-					<p class="info">May I know if you are aware of ConnecTechAsia which incorporates BroadcastAsia, CommunicAsia and NXTAsia? This mega event will be held from 26 – 28 June at Marina Bay Sands and Suntec Singapore.</p>
-					<label>Jawaban :</label>
-					<?php echo form_dropdown('know',array('0'=>'','1'=>'Ya','2'=>'Tidak'),set_value('know',$candidate->know),'id="know" class="form-control"') ?>
-				</div>
-			</div>
-			<div class="box box-know-no hide">
-				<div class="box-body form-inline">
-					<p class="info">Beri info tentang BroadcastAsia2018 dan ConnecTechAsia</p>
-					<button type="button" class="btn btn-default btn-xs doc">Klik Info tentang <?php echo $this->event['name'] ?></button>										
 				</div>
 			</div>
 			<div class="box box-send-email-yes hide">
@@ -180,6 +160,9 @@
 					<h3>Jika Anda tertarik untuk mengunjungi acaranya, mohon daftarkan kunjungan Anda sebelum 18 Juni 2018.</h3>
 					<h3>Juga sertakan rekan kerja dan teman Anda di industri ini ke pertunjukan, karena saya yakin itu relevan dan bermanfaat bagi pekerjaan mereka juga. Rekan kerja Anda juga bisa mendaftar secara online.</h3>					
 					<h3>Mohon perhatikan email yang akan segera saya kirimkan kepada Anda. Terima kasih dan kami menantikan kehadiran Anda.</h3>
+					<p class="info">If you are interested to visit the show, please pre-register your visit online at www.Broadcast-Asia.com before 18 June 2018.</p>
+					<p class="info">Do also bring along your colleagues and friends in the industry to the show as I am sure that it will be relevant and beneficial to their work as well. Your colleagues can also pre-register online.</p>
+					<p class="info">Please keep a look out for the email that I will be sending to you shortly.</p>
 				</div>
 			</div>
 			<div class="box box-email hide">
@@ -192,6 +175,11 @@
 					<button type="button" name="button" id="btn-send-email">Send Email</button>
 					<div class="send-email-alert"></div>
 				</div>
+				<div class="box-footer">
+					<?php if ($candidate->email): ?>						
+						<p class="info">Email Sebelumnya : <b><?php echo $candidate->email; ?></b></p>
+					<?php endif; ?>
+				</div>				
 			</div>			
 			<div class="box box-mobile hide">
 				<div class="box-header info">Dapatkan nomor ponsel</div>
@@ -213,14 +201,14 @@
 			</div>			
 			<div class="box box-closing-no hide">
 				<div class="box-body">
-					<h3>Baik tidak apa apa, Terima kasih banyak atas waktumu dan, <?php echo $greeting ?></h3>
-					<p class="info">See you at the event! </p>
+					<h3>Baik, Terima kasih atas waktunya, <?php echo $greeting ?></h3>
+					<p class="info">Thank you for your time & have a nice day.</p>
 				</div>
 			</div>			
 			<div class="box box-closing hide">
 				<div class="box-body">
 					<h3>Terima kasih dan kami menantikan kehadiran Anda</h3>
-					<p class="info">Thank you for your time & have a nice day</p>
+					<p class="info">Thank you again and we look forward to see you.</p>
 				</div>
 			</div>			
 		</div>

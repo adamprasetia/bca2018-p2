@@ -69,9 +69,7 @@ $(document).ready(function(){
 			$('.box-mobile').addClass('hide');
 			$('.box-closing-yes').addClass('hide');
 		}			
-		if($('#invite').val()=='1'){
-			$('.box-pre-registered-no').addClass('hide');
-		}else if ($('#invite').val()=='2') {
+		if ($('#invite').val()=='2' || $('#pre_registered').val()=='2') {
 			$('.box-pre-registered-no').removeClass('hide');			
 		}else{
 			$('.box-pre-registered-no').addClass('hide');			

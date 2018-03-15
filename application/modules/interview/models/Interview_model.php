@@ -13,9 +13,17 @@ class Interview_model extends CI_Model
 			}
 		}
 	}
+	public function get_vip_code_by_id($id){
+		$this->db->where('id',$id);
+		$result = $this->db->get('candidate');
+		if ($result->num_rows() > 0) {
+			return $result->row()->vip_code;	
+		}
+		return '';
+	}
 	public function send_email($id,$email){
 		$this->db->where('id',$id);
-		$this->db->update('candidate',array('send_email'=>$email));
+		$this->db->update('candidate',array('email_sent'=>$email));
 	}
 	public function phone($id,$data){
 		$this->db->where('id',$id);

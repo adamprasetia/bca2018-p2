@@ -84,5 +84,5 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-defined('APP_NAME')            OR define('APP_NAME', 'Sesallworld 2017');
+defined('APP_NAME')            OR define('APP_NAME', 'BroadcastAsia & CommunicAsia 2018');
 defined('APP_ALIAS')            OR define('APP_ALIAS', 'SW');

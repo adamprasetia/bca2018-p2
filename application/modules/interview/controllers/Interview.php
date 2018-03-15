@@ -43,7 +43,7 @@ class Interview extends MY_Controller {
 				$r->name,
 				$r->co,
 				($r->tel_new?$r->tel_new:$r->tel),
-				($r->email_new?$r->email_new:$r->email),
+				($r->email_new?$r->email_new:$r->email).' '.($r->email_sent?'<span title="'.$r->email_sent.'" class="glyphicon glyphicon-envelope"></span>':''),
 				$r->status_name,
 				$r->interviewer,
 				implode(',',$callhis),
@@ -116,11 +116,6 @@ class Interview extends MY_Controller {
 				'invite'=>$this->input->post('invite')?$this->input->post('invite'):0,
 				'pre_registered'=>$this->input->post('pre_registered')?$this->input->post('pre_registered'):0,
 				'send_email'=>$this->input->post('send_email')?$this->input->post('send_email'):0,
-				'get_email'=>$this->input->post('get_email')?$this->input->post('get_email'):0,
-				'get_mobile'=>$this->input->post('get_mobile')?$this->input->post('get_mobile'):0,
-				'title_ver'=>$this->input->post('title_ver'),
-				'co_ver'=>$this->input->post('co_ver'),
-				'add_ver'=>$this->input->post('add_ver'),
 				'remark'=>$this->input->post('remark')
 			);
 			$this->interview_model->phone($id,$data);
@@ -141,14 +136,26 @@ class Interview extends MY_Controller {
 			}else{
 				$data['fullname'] = $this->interview_model->get_name_by_id($id);
 			}
+			$data['vip_code'] = $this->interview_model->get_vip_code_by_id($id);
 			$data['telemarketer'] = $this->user_login['name'];
 			$content = $this->load->view('email_'.$this->event['id'],$data,true);
 			
 			$this->load->library('email');
 
-			$this->email->from('no-reply@adirect.web.id','BroadcastAsia2017');
 			$this->email->to($email);
-			$this->email->subject('Invitation to visit BroadcastAsia2017');
+			if ($this->event['id'] == 1) {
+				$this->email->from('no-reply@adirect.co.id', 'BroadcastAsia2018');
+				$this->email->subject('Invitation to visit BroadcastAsia2018');
+			}elseif ($this->event['id'] == 2) {
+				$this->email->from('no-reply@adirect.co.id', 'CommunicAsia2018 & NXTAsia2018');
+				$this->email->subject('Invitation to visit CommunicAsia2018 / NXTAsia2018');
+			}elseif ($this->event['id'] == 3) {
+				$this->email->from('no-reply@adirect.co.id', 'BroadcastAsia2018');
+				$this->email->subject('VIP Invitation to visit BroadcastAisa2018');
+			}elseif ($this->event['id'] == 4) {
+				$this->email->from('no-reply@adirect.co.id', 'CommunicAsia2018 & NXTAsia2018');
+				$this->email->subject('VIP Invitation to visit CommunicAsia / NXTAsia2018');
+			}
 			$this->email->message($content);
 			if (!$this->email->send()){
 				echo '<div class="alert alert-danger">'.$this->email->print_debugger().'</div>';
