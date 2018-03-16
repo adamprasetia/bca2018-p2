@@ -46,6 +46,7 @@ class Import extends MY_Controller {
 						'mobile'=>trim($active_sheet->getCell('L'.$i)->getValue()),
 						'email'=>trim($active_sheet->getCell('M'.$i)->getValue()),
 						'web'=>trim($active_sheet->getCell('N'.$i)->getValue()),
+						'vip_code'=>trim($active_sheet->getCell('O'.$i)->getValue()),
 						'date_create'=>date('Y-m-d H:i:s'),
 						'user_create'=>$this->user_login['id']
 					);
