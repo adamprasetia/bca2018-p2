@@ -40,7 +40,7 @@ class Interview extends MY_Controller {
 			$this->table->add_row(
 				$i++,
 				anchor('interview/phone/'.$r->id.get_query_string(),$r->serial).($r->valid==1?' <span class="label label-success">Valid</span>':'').($r->audit==1?' <span class="label label-primary">Audit</span>':''),
-				$r->name,
+				$r->name.(!empty($r->vip_code)?' <span class="label label-default">VIPCODE:'.$r->vip_code.'</span>':''),
 				$r->co,
 				($r->tel_new?$r->tel_new:$r->tel),
 				($r->email_new?$r->email_new:$r->email).' '.($r->email_sent?'<span title="'.$r->email_sent.'" class="glyphicon glyphicon-envelope"></span>':''),
