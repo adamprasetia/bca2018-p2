@@ -278,7 +278,7 @@
 						<button type="button" class="btn btn-danger btn-xs btn-callhis" value="Reject">Reject</button>
 					</div>	
 					<div class="box-footer">
-						<input id="note" type="text" name="note" maxlength="100" class="form-control" placeholder="note..." autocomplete="off">
+						<input id="note" type="text" name="note" maxlength="50" class="form-control" placeholder="note..." autocomplete="off">
 					</div>	
 				</div>	
 				<div class="box callhis-form hide">
